@@ -1,10 +1,13 @@
 """Run a random agent in the AI2Thor RL environment."""
 
 # %%
+import sys
 import os
 from pathlib import Path
 
 from benchmark.experiment_utils import FullMetricsLogWrapper
+
+sys.path.append(os.path.abspath("../src"))
 
 from rl_thor.agents.agents import RandomAgent
 from rl_thor.agents.callbacks import RecordVideoCallback

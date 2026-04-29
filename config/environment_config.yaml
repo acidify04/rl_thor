@@ -63,10 +63,10 @@ tasks:
       args:
         placed_object_type: Mug
         receptacle_type: CounterTop
-      scenes: &ALL_SCENES [Kitchen, LivingRoom, Bedroom, Bathroom] # List of scene names to use for the task (e.g. scene groups: "Kitchen", "LivingRoom", "Bedroom", "Bathroom" or full names like "FloorPlan1", "FloorPlan201", ...)
-    - task_type: PlaceWithMoveableRecepIn
-      args:
-        placed_object_type: Apple
-        pickupable_receptacle_type: Plate
-        receptacle_type: CounterTop
-      scenes: *ALL_SCENES
+      scenes: [Kitchen] # List of scene names to use for the task (e.g. scene groups: "Kitchen", "LivingRoom", "Bedroom", "Bathroom" or full names like "FloorPlan1", "FloorPlan201", ...)
+ #   - task_type: PlaceWithMoveableRecepIn
+  #    args:
+   #     placed_object_type: Apple
+    #    pickupable_receptacle_type: Plate
+     #   receptacle_type: CounterTop
+      #scenes: [Kitchen]

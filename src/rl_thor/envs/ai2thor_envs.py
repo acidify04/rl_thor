@@ -97,7 +97,7 @@ class ITHOREnv(
 
     def __init__(
         self,
-        config_path: str | Path = Path("config/environment_config.yaml"),
+        config_path: str | Path = Path("../config/environment_config.yaml"),
         config_override: dict | None = None,
     ) -> None:
         """

@@ -1,5 +1,7 @@
 """Utilities for running experiments."""
 
+import sys
+import os
 import csv
 import uuid
 from collections.abc import Iterable
@@ -10,6 +12,8 @@ from typing import Any
 
 import yaml
 from stable_baselines3.common.vec_env import DummyVecEnv
+
+sys.path.append(os.path.abspath("../../src"))
 
 from rl_thor.envs.ai2thor_envs import BaseAI2THOREnv
 

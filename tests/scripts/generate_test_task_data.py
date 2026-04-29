@@ -34,7 +34,7 @@ def main():
     """Generate data for the tasks tests."""
     controller = Controller()
 
-    # generate_pickup_mug_data(controller)
+    generate_pickup_mug_data(controller)
     # generate_open_fridge_data(controller)
     # generate_place_cooled_in_apple_counter_top_data(controller)
     # generate_look_in_light_book_data(controller)
@@ -98,6 +98,8 @@ class TaskDataRecorder:
         """Record the step data."""
         self.step_number += 1
         event = self.controller.step(**action_args)
+        import time
+        time.sleep(2)
         self.event_list.append(event)  # type: ignore
         self.controller_action_list.append(self.controller.last_action)
         self.advancement_list.append(advancement)
@@ -151,6 +153,7 @@ def generate_prepare_meal_data(controller: Controller) -> None:
         },
         advancement=2,  # potato(isCooked-IsPickedUp) 1 + potato(containedIn:plate) 1
     )
+    # print(controller.last_event.metadata.get('inventoryObjects'))
 
     # === Event 2: Put the potato on the pan ===
     data_recorder.record_step(

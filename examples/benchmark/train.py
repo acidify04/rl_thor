@@ -24,7 +24,7 @@ if TYPE_CHECKING:
 
     from rl_thor.envs.ai2thor_envs import ITHOREnv
 
-config_path = Path("examples/benchmark/config/environment_config.yaml")
+config_path = Path("config/environment_config.yaml")
 with config_path.open("r") as file:
     env_config = yaml.safe_load(file)
 

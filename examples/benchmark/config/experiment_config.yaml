@@ -1,5 +1,6 @@
 wandb:
   project: rl_thor_benchmark
+  group: rl_thor_benchmark
   sync_tensorboard: true
   monitor_gym: true
   save_code: true
